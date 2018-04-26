@@ -10,7 +10,15 @@ $passwd = 'endo0720';
     
 try {
   $db = new PDO($dsn, $user, $passwd);
-  print('データベースに接続できました。');
+  print('データベースに接続できました。<br>');
+  
+  $stt = $db->prepare('select * from test');
+  $stt->execute();
+  $row = $stt->fetch();
+  print($row['ido'].'<br>');
+  print($row['keido']);
+    
+      
   $db = NULL;
 } catch(PDOException $e) {
   die('エラーメッセージ：'.$e->getMessage());
