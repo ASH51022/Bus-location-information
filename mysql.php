@@ -1,10 +1,10 @@
 <?php
 
 try{
-$db = new PDO('mysql:host=210.151.58.201;dbname=Bus_service','yonesen','senkouka');
+$db = new PDO('mysql:host=localhost;dbname=db','user','pass');
 echo '接続完了';
     
-$stt=$db->prepare('SELECT * FROM bus;');
+$stt=$db->prepare('SELECT * FROM table;');
 
 $stt->execute();
 

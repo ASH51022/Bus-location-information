@@ -12,6 +12,6 @@ $options = array(
 			)
 	);
 $context = stream_context_create($options);
-$response = file_get_contents('http://210.151.58.201/test.php', false, $context);
+$response = file_get_contents('http://localhost/test.php', false, $context);
 
 ?>
