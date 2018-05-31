@@ -46,7 +46,7 @@ try {
     function initMap() {
 	map = new google.maps.Map(document.getElementById('mapdraw'), {
 		center: myLatLng,
-		zoom: 19 // 地図のズームを指定
+		zoom: 19
 	});
     var marker = new google.maps.Marker({
                  position: myLatLng,
