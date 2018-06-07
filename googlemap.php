@@ -25,7 +25,7 @@ try {
   $db = new PDO($dsn, $user, $passwd);
   print('データベースに接続できました。<br>');
   
-  $stt = $db->prepare('select * from test');
+  $stt = $db->prepare('select * from bus ORDER BY zikoku desc limit 1;');
   $stt->execute();
   $row = $stt->fetch();
   print('緯度:'.$row['ido'].'<br>');
